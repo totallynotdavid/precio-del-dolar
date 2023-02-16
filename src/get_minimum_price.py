@@ -15,7 +15,7 @@ for i, result in enumerate(sorted_results):
     print(f"     Image source: {result['ImageSrc']}")
 
 # Write the results to a file
-with open('minimum_price.json', 'w', encoding='utf-8') as f:
+with open('../minimum_price.json', 'w', encoding='utf-8') as f:
     json.dump(sorted_results, f, indent=4)
 
 print("Results written to file 'minimum_price.json'")
