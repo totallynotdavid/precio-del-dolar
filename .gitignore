@@ -1,2 +1,2 @@
-results.json
-minimum_price.json
+*.json
+**/__pycache__/**
