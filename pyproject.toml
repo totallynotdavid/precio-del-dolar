@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "precio-del-dolar"
+name = "perexchange"
 version = "0.1.0"
 description = ""
 authors = ["David <contacto@altmails.com>"]
@@ -7,13 +7,21 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.scripts]
-precio-del-dolar = "precio_del_dolar:main"
+start = "perexchange.main:main"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
 requests = "^2.32.3"
 beautifulsoup4 = "^4.12.3"
 flask = "^3.0.3"
+pydantic = "^2.9.2"
+sqlalchemy = "^2.0.35"
+httpx = "^0.27.2"
+apscheduler = "^3.10.4"
+pytz = "^2024.2"
+pydantic-settings = "^2.5.2"
+psycopg2 = "^2.9.9"
+aiosqlite = "^0.20.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.6.9"
@@ -26,13 +34,13 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 skip-string-normalization = true
-line-length = 120
+line-length = 100
 
 [tool.ruff]
 # Same as Black.
-line-length = 120
+line-length = 100
 
-select = [
+lint.select = [
     "E",  # pycodestyle errors (settings from FastAPI, thanks, @tiangolo!)
     "W",  # pycodestyle warnings
     "F",  # pyflakes
@@ -40,12 +48,12 @@ select = [
     "C",  # flake8-comprehensions
     "B",  # flake8-bugbear
 ]
-ignore = [
+lint.ignore = [
     "E501",  # line too long, handled by black
     "C901",  # too complex
 ]
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 order-by-type = true
 relative-imports-order = "closest-to-furthest"
 extra-standard-library = ["typing"]
