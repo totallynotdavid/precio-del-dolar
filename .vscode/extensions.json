@@ -1,9 +1,8 @@
 {
-    "recommendations":
-      [
-          "CoderCoder.codercoder-dark-theme",
-          "vivaxy.vscode-conventional-commits",
-          "GitHub.copilot-nightly",
-          "GitHub.copilot-labs"
-      ]
-  }
+  "recommendations": [
+    "CoderCoder.codercoder-dark-theme",
+    "vivaxy.vscode-conventional-commits",
+    "GitHub.copilot-nightly",
+    "GitHub.copilot-labs"
+  ]
+}

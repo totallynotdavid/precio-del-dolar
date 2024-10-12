@@ -1,20 +1,17 @@
 {
-    "name": "py-workbench",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "editor.formatOnSave": true,
-                "files.insertFinalNewline": true,
-                "files.trimFinalNewlines": true,
-                "files.trimTrailingWhitespace": true
-            },
-            "extensions": [
-                "ms-python.python",
-                "GitHub.copilot"
-            ]
-        }
+  "name": "py-workbench",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true
+      },
+      "extensions": ["ms-python.python", "GitHub.copilot"]
     }
+  }
 }
